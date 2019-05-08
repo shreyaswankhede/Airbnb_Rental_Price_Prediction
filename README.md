@@ -16,6 +16,23 @@ The objective of this project is to model the prices of Airbnb appartments in Lo
 3. The tool will also provide simple suggestions to the user based on the regression model to help them get the max rental price while not losing out on the occupancy. For example, If the user has set strict cancellation policy, then the tool will provide suggestion like if they change the cancellation policy to moderate they can fetch 10$ additional or say if the user can include internet facility with the room, then it can fetch him an additional 15$.
 4. As the dataset has been scraped from Airbnb, it requires extensive cleaning, imputation of the missing values and feature engineering before creating the model. What makes this idea challenging is that no two rentals are the same. All rentals are unique because of their location, amenities, reviews, size, etc. 
 ***
+
+### Data Cleaning
+* Removed the unwanted features from our dataset.
+* Removed the features which could leak information(Reviews)
+* Performed Exploratory Data Analysis (EDA) in order to remove categorical columns which had unbalanced data
+
+### Feature Selection & Feature Engineering
+* Select feature like 'amenities' for feature engineering.
+
+### Model Selection and Creation
+* Before performing Regression performing Classification model to predict Price_bins
+* Building XGBRegressor model for each price bins
+<br> XGBRegressor	For Price_bin 1 - MAE(test)	7.8473
+<br>XGBRegressor	For Price_bin 2 - MAE(test) 22.54
+***
+
+
 <p>Thank You!	
 <p><!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/shreyaswankhede" aria-label="Follow @shreyaswankhede on GitHub">Follow @shreyaswankhede</a>
